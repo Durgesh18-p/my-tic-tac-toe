@@ -8,6 +8,7 @@ Array.from(playersInput).forEach(element =>{
         console.log(element)
         element.innerText = turn;
         turn = changeTurn()
+        document.querySelector('#winner').innerText = turn + "'s turn";
         checkWin()
     })
 })
@@ -40,6 +41,7 @@ resetBtn.addEventListener('click',function(){
     Array.from(playersInput).forEach(element =>{
         element.innerText = ''
     })
+    document.querySelector('#winner').innerText = "";
 })
 
 
